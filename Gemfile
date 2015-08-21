@@ -23,7 +23,7 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-<<<<<<< Updated upstream
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
@@ -39,12 +39,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
   # better_errorsの画面上にirb/pry(PERL)を表示する
   gem 'binding_of_caller'
 
-=======
+
 gem 'pry-rails'
 gem 'devise'
 gem "haml-rails"
 gem 'bootstrap-sass'
->>>>>>> Stashed changes
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
