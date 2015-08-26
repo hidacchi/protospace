@@ -37,6 +37,7 @@ source 'https://rubygems.org'
   # Use Capistrano for deployment
   # gem 'capistrano-rails', group: :development
 
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -52,5 +53,6 @@ group :development, :test do
 
   # better_errorsの画面上にirb/pry(PERL)を表示する
   gem 'binding_of_caller'
+
 end
 
