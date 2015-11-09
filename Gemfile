@@ -28,7 +28,8 @@ source 'https://rubygems.org'
   gem "haml-rails"
   gem 'bootstrap-sass'
   gem 'erb2haml'
-
+  gem 'carrierwave'
+  gem 'kaminari'
   # Use ActiveModel has_secure_password
   # gem 'bcrypt', '~> 3.1.7'
 
