@@ -23,22 +23,22 @@
               %li
                 = link_to "Delete", "/prototypes/#{prototype.id}", method: :delete
               %li
-                = link_to "Edit", edit_prototype_path(prototype.id)
+                = link_to "Edit", edit_prototype_path(prototype)
       .thumbnail
         - if prototype.thumbnails.main.present?
-          = link_to image_tag(prototype.thumbnails.main.first.image), prototype_path(prototype.id)
+          = link_to image_tag(prototype.thumbnails.main.first.image), prototype_path(prototype)
         - else
-          = link_to image_tag("no_img.png"), prototype_path(prototype.id)
+          = link_to image_tag("no_img.png"), prototype_path(prototype)
         .caption
           %h3
-            = link_to prototype.title, prototype_path(prototype.id)
+            = link_to prototype.title, prototype_path(prototype)
           .proto-meta
             .proto-user
-              = link_to "by #{prototype.user.name}", user_registration_path(prototype.user_id)
+              = link_to "by #{prototype.user.name}", user_registration_path(prototype)
             .proto-posted
               = prototype.created_at
           %ul.proto-tag-list.list-inline
             %li
-              = link_to "iPad", prototype_path(prototype.id), class: 'btn btn-default'
+              = link_to "iPad", prototype_path(prototype), class: 'btn btn-default'
 .text-center
   = paginate @prototypes

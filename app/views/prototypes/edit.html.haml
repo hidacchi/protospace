@@ -13,14 +13,14 @@
         %ul.proto-sub-list.list-group
           %li.list-group-item.col-md-4
             .image-upload
-              = f.fields_for :thumbnails, @prototype.thumbnails.sub1 do |thumbnail|
+              = f.fields_for :thumbnails, @prototype.thumbnails.sub do |thumbnail|
                 = thumbnail.file_field :image
-                = thumbnail.hidden_field :status, value: :sub1
+                = thumbnail.hidden_field :status, value: :sub
           %li.list-group-item.col-md-4
             .image-upload
-              = f.fields_for :thumbnails, @prototype.thumbnails.sub2 do |thumbnail|
+              = f.fields_for :thumbnails, @prototype.thumbnails.sub do |thumbnail|
                 = thumbnail.file_field :image
-                = thumbnail.hidden_field :status, value: :sub2
+                = thumbnail.hidden_field :status, value: :sub
           %li.list-group-item.col-md-4
             .image-upload-plus
               %span +

@@ -4,5 +4,5 @@ class Thumbnail < ActiveRecord::Base
 
   # carrierwave
   mount_uploader :image, AvatarUploader
-  enum status: %i(main sub1 sub2)
+  enum status: %i(main sub)
 end

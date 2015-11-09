@@ -15,20 +15,20 @@
             .image-upload
               = f.fields_for :thumbnails do |thumbnail|
                 = thumbnail.file_field :image
-                = thumbnail.hidden_field :status, value: :sub1
+                = thumbnail.hidden_field :status, value: :sub
           %li.list-group-item.col-md-4
             .image-upload
               = f.fields_for :thumbnails do |thumbnail|
                 = thumbnail.file_field :image
-                = thumbnail.hidden_field :status, value: :sub2
+                = thumbnail.hidden_field :status, value: :sub
           %li.list-group-item.col-md-4
             .image-upload-plus
               %span +
     .row.proto-description
       .col-md-12
-        =f.text_field :catchcopy, placeholder: 'Catchcopy'
+        = f.text_field :catchcopy, placeholder: 'Catchcopy'
       .col-md-12
-        =f.text_area :concept, placeholder: 'Concept'
+        = f.text_area :concept, placeholder: 'Concept'
       .col-md-12
         %h4 Tag List
         .row
@@ -39,4 +39,4 @@
           .col-md-3
             %input{type: "text", placeholder: "TAG名"}/
     .row.text-center.proto-btn
-      =f.submit 'Publish', class: 'btn btn-lg btn-primary btn-block'
+      = f.submit 'Publish', class: 'btn btn-lg btn-primary btn-block'
