@@ -55,6 +55,9 @@ body {
   }
 }
 
+.dropdown {
+  position: absolute;
+}
 
 
 /* -- Buttons sizes -------------------------------- */
@@ -271,7 +274,7 @@ body {
 }
 
 .jumbotron {
-  background-image: image-url("header_bg.png");
+  background-image: image-url("header_bg1.jpg");
   background-position:  center 92px;
   background-repeat: no-repeat;
   background-attachment: fixed;

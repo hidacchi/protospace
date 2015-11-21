@@ -1,18 +1,22 @@
 class UsersController < ApplicationController
 
-  # before_action :authenticate_user! #そもそもview側でif分使ってユーザーページの表示、非表示を管理しているのでいらない。
+  # before_action :authenticate_user!, only: [:show]
 
   def show
-  end
-
-  def new
+    @user = User.includes(:prototypes).find(params[:id])
+    @prototypes = @user.prototypes.page(params[:page])
   end
 
   def edit
   end
 
+  def update
+    current_user.update(user_params)
+    redirect_to user_path
+  end
+
   private
   def user_params
-    params.require(:user).permit(:name, :password, :avatar)
+    params.require(:user).permit(:name, :email, :profile, :works, :avatar)
   end
 end
