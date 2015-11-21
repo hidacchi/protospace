@@ -1,6 +1,7 @@
 class PrototypesController < ApplicationController
   def show
     @prototype = Prototype.includes(:user, :thumbnails).find(params[:id])
+    @prototype_image = @prototype.thumbnails.main.first.image
   end
 
   def new

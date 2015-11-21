@@ -1,0 +1,32 @@
+.col-sm-4.col-md-3.proto-content
+  .thumbnail
+    - if prototype.thumbnails.present?
+      = link_to image_tag(prototype.thumbnails.main.first.image), prototype_path(prototype)
+      .caption
+        %h3
+          = link_to prototype.title, prototype_path(prototype)
+        .proto-meta
+          .proto-date
+            = prototype.updated_at
+          .proto-user
+            = link_to "by #{prototype.user.name}", user_registration_path(prototype)
+          .proto-posted
+            = prototype.created_at
+        %ul.proto-tag-list.list-inline
+          %li
+            = link_to "iPad", prototype_path(prototype), class: 'btn btn-default'
+    - else
+      = link_to image_tag("no_img.png"), prototype_path(prototype)
+      .caption
+        %h3
+          = link_to prototype.title, prototype_path(prototype)
+        .proto-meta
+          .proto-date
+            = prototype.updated_at
+          .proto-user
+            = link_to "by #{prototype.user.name}", user_registration_path(prototype)
+          .proto-posted
+            = prototype.created_at
+        %ul.proto-tag-list.list-inline
+          %li
+            = link_to "iPad", prototype_path(prototype), class: 'btn btn-default'

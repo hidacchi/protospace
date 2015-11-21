@@ -12,33 +12,6 @@
       = link_to "View Tags", root_path, class: "btn btn-default col-lg-1"
 .container.proto-list
   .row
-  - @prototypes.each do |prototype|
-    .col-sm-4.col-md-3.proto-content
-      .dropdown.drop_menu_location
-        - if user_signed_in? && prototype.user_id == current_user.id
-          %div.dropdown
-            %button.btn.btn-default.dropdown-toggle#dropdownMenu{'data-toggle' => 'dropdown', type: 'button'}
-              Menu
-            %ul.dropdown-menu{ 'aria-labelledby' => 'dropdownMenu1' }
-              %li
-                = link_to "Delete", "/prototypes/#{prototype.id}", method: :delete
-              %li
-                = link_to "Edit", edit_prototype_path(prototype)
-      .thumbnail
-        - if prototype.thumbnails.main.present?
-          = link_to image_tag(prototype.thumbnails.main.first.image), prototype_path(prototype)
-        - else
-          = link_to image_tag("no_img.png"), prototype_path(prototype)
-        .caption
-          %h3
-            = link_to prototype.title, prototype_path(prototype)
-          .proto-meta
-            .proto-user
-              = link_to "by #{prototype.user.name}", user_registration_path(prototype)
-            .proto-posted
-              = prototype.created_at
-          %ul.proto-tag-list.list-inline
-            %li
-              = link_to "iPad", prototype_path(prototype), class: 'btn btn-default'
+    = render partial: 'top/prototype', collection: @prototypes
 .text-center
   = paginate @prototypes
