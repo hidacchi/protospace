@@ -14,7 +14,7 @@ class Prototype < ActiveRecord::Base
   accepts_nested_attributes_for :thumbnails
 
   #like_userというメソッドはそのユーザが、アクセスしている投稿にlikeをしているかどうかというものを判定するものです。
-  def like_user(user)
-    likes.find_by(user_id: user.id)
+  def liked_by?(user)
+    likes.exists?(user_id: user.id)
   end
 end
