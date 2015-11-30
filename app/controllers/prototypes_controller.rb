@@ -2,6 +2,9 @@ class PrototypesController < ApplicationController
   def show
     @prototype = Prototype.includes(:user, :thumbnails).find(params[:id])
     @prototype_image = @prototype.thumbnails.main.first.image
+
+    @new_comment = Comment.new
+    @comments = @prototype.comments
   end
 
   def new
@@ -39,10 +42,10 @@ class PrototypesController < ApplicationController
 
   private
   def prototype_params
-    params.require(:prototype).permit(:title, :catch_copy, :concept, thumbnails_attributes: [:image, :status])
+    params.require(:prototype).permit(:title, :catchcopy, :concept, thumbnails_attributes: [:image, :status])
   end
 
   def update_params
-    params.require(:prototype).permit(:title, :catch_copy, :concept, thumbnails_attributes: [:id, :image, :status]).merge(user_id: current_user.id)
+    params.require(:prototype).permit(:title, :catchcopy, :concept, thumbnails_attributes: [:id, :image, :status]).merge(user_id: current_user.id)
   end
 end

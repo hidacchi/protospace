@@ -1,0 +1,4 @@
+$(".form-control").val("");
+$("#comments").html(
+  '<%= j(render partial: 'comments/comment', collection: @prototype.comments) %>'
+);
