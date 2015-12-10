@@ -1,13 +1,13 @@
 .jumbotron
   .container.text-center
-    = image_tag("header_logo.png", :alt => "PROTO TYPE - SHARE THE PROTOTYPE", :height => "73px")
+    = image_tag("header_logo.png", alt: "PROTO TYPE - SHARE THE PROTOTYPE", height: "73px")
 .filter-nav
   .container
     .row
       %ul.nav.nav-pills.col-lg-11
-        %li.sort_tab.popular.active{:role => "presentation"}
+        %li.sort_tab.popular.active{role: "presentation"}
           = link_to "Popular PROTO", prototypes_popular_index_path
-        %li.sort_tab.newest{:role => "presentation"}
+        %li.sort_tab.newest{role: "presentation"}
           = link_to "Newest PROTO", prototypes_newest_index_path
       = link_to "View Tags", root_path, class: "btn btn-default col-lg-1"
 .container.proto-list

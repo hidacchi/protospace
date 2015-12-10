@@ -1,77 +1,21 @@
 .jumbotron
   .container.text-center
-    = image_tag("header_logo.png", :alt => "PROTO TYPE - SHARE THE PROTOTYPE", :height => "73px")
+    = image_tag("header_logo.png", alt: "PROTO TYPE - SHARE THE PROTOTYPE", height: "73px")
 .filter-nav
   .container
     .row
       %ul.nav.nav-pills.col-lg-11
-        %li.active{:role => "presentation"}
-          %a{:href => "#"} Popular PROTO
-        %li{:role => "presentation"}
-          %a{:href => "#"} Newest PROTO
-      %button{:type => "button", :class => "btn btn-default col-lg-1"} View Tags
+        %li.active{role: "presentation"}
+          %a{href: "#"} Popular PROTO
+        %li{role: "presentation"}
+          %a{href: "#"} Newest PROTO
+      %button{type: "button", class: "btn btn-default col-lg-1"} View Tags
 .container.proto-list
   .row
     .col-sm-4.col-md-3.proto-content
       .thumbnail
-        %button{:href => "#", :style => "width: 100%; height: 50px; font-size: 2rem; font-weight: 300; padding-bottom: 3px; color: #999; background-color: #eee;", :class => "btn btn-tag"} TAG-NAME
+        %button{href: "#", style: "width: 100%; height: 50px; font-size: 2rem; font-weight: 300; padding-bottom: 3px; color: #999; background-color: #eee;", class: "btn btn-tag"} TAG-NAME
         .tag-meta
-          %a{:href => "#", :style => "display: block; font-size: 1.3rem; border-radius: 2px; margin: 0 -2px 2px;", :class => "label label-default tag-list-number"}
-            16
-            %i Projects
-    .col-sm-4.col-md-3.proto-content
-      .thumbnail
-        %button{:href => "#", :style => "width: 100%; height: 50px; font-size: 2rem; font-weight: 300; padding-bottom: 3px; color: #999; background-color: #eee;", :class => "btn btn-tag"} TAG-NAME
-        .tag-meta
-          %a{:href => "#", :style => "display: block; font-size: 1.3rem; border-radius: 2px; margin: 0 -2px 2px;", :class => "label label-default tag-list-number"}
-            16
-            %i Projects
-    .col-sm-4.col-md-3.proto-content
-      .thumbnail
-        %button{:href => "#", :style => "width: 100%; height: 50px; font-size: 2rem; font-weight: 300; padding-bottom: 3px; color: #999; background-color: #eee;", :class => "btn btn-tag"} TAG-NAME
-        .tag-meta
-          %a{:href => "#", :style => "display: block; font-size: 1.3rem; border-radius: 2px; margin: 0 -2px 2px;", :class => "label label-default tag-list-number"}
-            16
-            %i Projects
-    .col-sm-4.col-md-3.proto-content
-      .thumbnail
-        %button{:href => "#", :style => "width: 100%; height: 50px; font-size: 2rem; font-weight: 300; padding-bottom: 3px; color: #999; background-color: #eee;", :class => "btn btn-tag"} TAG-NAME
-        .tag-meta
-          %a{:href => "#", :style => "display: block; font-size: 1.3rem; border-radius: 2px; margin: 0 -2px 2px;", :class => "label label-default tag-list-number"}
-            16
-            %i Projects
-    .col-sm-4.col-md-3.proto-content
-      .thumbnail
-        %button{:href => "#", :style => "width: 100%; height: 50px; font-size: 2rem; font-weight: 300; padding-bottom: 3px; color: #999; background-color: #eee;", :class => "btn btn-tag"} TAG-NAME
-        .tag-meta
-          %a{:href => "#", :style => "display: block; font-size: 1.3rem; border-radius: 2px; margin: 0 -2px 2px;", :class => "label label-default tag-list-number"}
-            16
-            %i Projects
-    .col-sm-4.col-md-3.proto-content
-      .thumbnail
-        %button{:href => "#", :style => "width: 100%; height: 50px; font-size: 2rem; font-weight: 300; padding-bottom: 3px; color: #999; background-color: #eee;", :class => "btn btn-tag"} TAG-NAME
-        .tag-meta
-          %a{:href => "#", :style => "display: block; font-size: 1.3rem; border-radius: 2px; margin: 0 -2px 2px;", :class => "label label-default tag-list-number"}
-            16
-            %i Projects
-    .col-sm-4.col-md-3.proto-content
-      .thumbnail
-        %button{:href => "#", :style => "width: 100%; height: 50px; font-size: 2rem; font-weight: 300; padding-bottom: 3px; color: #999; background-color: #eee;", :class => "btn btn-tag"} TAG-NAME
-        .tag-meta
-          %a{:href => "#", :style => "display: block; font-size: 1.3rem; border-radius: 2px; margin: 0 -2px 2px;", :class => "label label-default tag-list-number"}
-            16
-            %i Projects
-    .col-sm-4.col-md-3.proto-content
-      .thumbnail
-        %button{:href => "#", :style => "width: 100%; height: 50px; font-size: 2rem; font-weight: 300; padding-bottom: 3px; color: #999; background-color: #eee;", :class => "btn btn-tag"} TAG-NAME
-        .tag-meta
-          %a{:href => "#", :style => "display: block; font-size: 1.3rem; border-radius: 2px; margin: 0 -2px 2px;", :class => "label label-default tag-list-number"}
-            16
-            %i Projects
-    .col-sm-4.col-md-3.proto-content
-      .thumbnail
-        %button{:href => "#", :style => "width: 100%; height: 50px; font-size: 2rem; font-weight: 300; padding-bottom: 3px; color: #999; background-color: #eee;", :class => "btn btn-tag"} TAG-NAME
-        .tag-meta
-          %a{:href => "#", :style => "display: block; font-size: 1.3rem; border-radius: 2px; margin: 0 -2px 2px;", :class => "label label-default tag-list-number"}
+          %a{href: "#", style: "display: block; font-size: 1.3rem; border-radius: 2px; margin: 0 -2px 2px;", class: "label label-default tag-list-number"}
             16
             %i Projects
