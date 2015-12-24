@@ -37,7 +37,7 @@ source 'https://rubygems.org'
   gem "rmagick"            #リサイズ
 
   #アップローダー(キャッシュのS3対応をする場合、carrierwaveはgithubから取得する必要があります)
-  gem 'carrierwave',github: 'carrierwaveuploader/carrierwave'
+  gem 'carrierwave'#,github: 'carrierwaveuploader/carrierwave'
   gem "fog"                #S3用
   gem "unf"                #unfのgemがないと警告が出るので追加しておきます。
 
