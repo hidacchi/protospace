@@ -1,0 +1,7 @@
+.col-sm-4.col-md-3.proto-content
+  .thumbnail
+    = link_to tag, tag_path(tag.name), type: 'button', class: "btn btn-tag", style: "width: 100%; height: 50px; font-size: 2rem; font-weight: 300; padding-bottom: 3px; color: #999; background-color: #eee;"
+    .tag-meta
+      %a{href: tag_path(tag.name), style: "display: block; font-size: 1.3rem; border-radius: 2px; margin: 0 -2px 2px;", class: "label label-default tag-list-number"}
+        = tag.taggings_count
+        %i Prototypes
