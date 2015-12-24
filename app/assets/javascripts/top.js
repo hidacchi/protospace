@@ -13,7 +13,7 @@
 
 // window.addEventListener("load", function() {
 //   var $list = $('.sort_tab')
-//   $list.on("click", function() {
+//   $list.on("click", function(e) {
 //     $list.remove("active");
 //     $(this).addClass("active");
 //   });

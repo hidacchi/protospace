@@ -5,7 +5,7 @@ class Prototype < ActiveRecord::Base
   belongs_to :user
 
   #ページネーション
-  paginates_per 10
+  paginates_per 12
 
   #バリデーション（値がからでないか）
   validates_presence_of :title, :catchcopy, :concept
@@ -17,4 +17,7 @@ class Prototype < ActiveRecord::Base
   def liked_by?(user)
     likes.exists?(user_id: user.id)
   end
+
+  # acts_as_taggable_on :tags のエイリアス
+  acts_as_taggable
 end

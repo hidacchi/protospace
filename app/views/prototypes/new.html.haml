@@ -33,10 +33,13 @@
         %h4 Tag List
         .row
           .col-md-3
-            %input{type: "text", placeholder: "TAG名"}/
+            = text_field_tag 'prototype[tag][]','', placeholder: 'TAG名1'
+            / %input{type: "text", placeholder: "TAG名"}/
           .col-md-3
-            %input{type: "text", placeholder: "TAG名"}/
+            = text_field_tag 'prototype[tag][]','', placeholder: 'TAG名2'
+            / %input{type: "text", placeholder: "TAG名"}/
           .col-md-3
-            %input{type: "text", placeholder: "TAG名"}/
+            = text_field_tag 'prototype[tag][]','', placeholder: 'TAG名3'
+            / %input{type: "text", placeholder: "TAG名"}/
     .row.text-center.proto-btn
       = f.submit 'Publish', class: 'btn btn-lg btn-primary btn-block'

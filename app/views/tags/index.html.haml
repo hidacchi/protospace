@@ -6,16 +6,10 @@
     .row
       %ul.nav.nav-pills.col-lg-11
         %li.active{role: "presentation"}
-          %a{href: "#"} Popular PROTO
+          = link_to "Popular PROTO", prototypes_popular_index_path
         %li{role: "presentation"}
-          %a{href: "#"} Newest PROTO
+          = link_to "Newest PROTO", prototypes_newest_index_path
       %button{type: "button", class: "btn btn-default col-lg-1"} View Tags
 .container.proto-list
   .row
-    .col-sm-4.col-md-3.proto-content
-      .thumbnail
-        %button{href: "#", style: "width: 100%; height: 50px; font-size: 2rem; font-weight: 300; padding-bottom: 3px; color: #999; background-color: #eee;", class: "btn btn-tag"} TAG-NAME
-        .tag-meta
-          %a{href: "#", style: "display: block; font-size: 1.3rem; border-radius: 2px; margin: 0 -2px 2px;", class: "label label-default tag-list-number"}
-            16
-            %i Projects
+    = render partial: 'tag', collection: @tags
