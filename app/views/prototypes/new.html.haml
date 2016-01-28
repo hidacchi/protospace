@@ -5,19 +5,19 @@
         = f.text_field :title, placeholder: "Title", class: 'proto-new-title'
     .row
       .col-md-12
-        .cover-image-upload
+        .cover-image-upload#upload-main
           = f.fields_for :thumbnails do |thumbnail|
             = thumbnail.file_field :image
             = thumbnail.hidden_field :status, value: :main
       .col-md-12
         %ul.proto-sub-list.list-group
           %li.list-group-item.col-md-4
-            .image-upload
+            .image-upload#upload-sub1
               = f.fields_for :thumbnails do |thumbnail|
                 = thumbnail.file_field :image
                 = thumbnail.hidden_field :status, value: :sub
           %li.list-group-item.col-md-4
-            .image-upload
+            .image-upload#upload-sub2
               = f.fields_for :thumbnails do |thumbnail|
                 = thumbnail.file_field :image
                 = thumbnail.hidden_field :status, value: :sub
